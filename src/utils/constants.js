@@ -46,9 +46,7 @@ export const TAG_LIST = [
   { path: "", name: "Valentines" },
 ];
 
-const GOOGLE_API_KEY = "AIzaSyCXj1F9RiT3j-SfOw4TtLpFPQMhpAohhCs";
-
-export const YOUTUBE_VIDEOS_API = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${GOOGLE_API_KEY}`;
+export const YOUTUBE_VIDEOS_API =`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
 
 export const YOUTUBE_EMBED_URL_PREFIX = "https://www.youtube.com/embed/";
 
