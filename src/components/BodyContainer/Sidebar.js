@@ -10,16 +10,16 @@ const Sidebar = () => {
 
   return (
     <div className="p-5 shadow-lg w-48">
-      {SIDEBAR_MENU_LIST.map((category) => (
+      {SIDEBAR_MENU_LIST.map((category, index) => (
         <>
           {category.sectionHeading && (
             <h1 key={category.sectionHeading} className="font-bold pt-5">
               {category.sectionHeading}
             </h1>
           )}
-          <ul>
+          <ul key={index}>
             {category.submenuList.map((submenu, index) => (
-              <li key={submenu.menu}>
+              <li key={index}>
                 <Link key={index} to={submenu.path}>
                   {submenu.menu}
                 </Link>
